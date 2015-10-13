@@ -12,10 +12,10 @@ function! SyntaxCheckers_javascript_csf_IsAvailable() dict
 endfunction
 
 function! SyntaxCheckers_javascript_csf_GetLocList() dict
-	let makeprg = self.makeprgBuild({ 'args': '--no-color --show-columns' })
+	let makeprg = self.makeprgBuild({ 'args': '--no-color' })
 
-	let errorformat = '    Line %l\, Column %c: %m,' .
-		\ '    Lines %l-%\d\, Column %c: %m,'
+	let errorformat = '    Line %l: %m,' .
+		\ '    Lines %l-%\d: %m,'
 
 	return SyntasticMake({
 		\ 'defaults': {
