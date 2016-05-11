@@ -13,6 +13,8 @@ You can specify `check_sf` over the builtin checkers for a given file type by ad
 ```vim
 " The following types are supported:
 let g:syntastic_javascript_checkers = ['csf']
+let g:syntastic_css_checkers = ['csf']
+let g:syntastic_scss_checkers = ['csf']
 ```
 
 If you need to pass specific parameters to `check_sf`, see syntastic's help page on the subject (`:help syntastic-checker-options`).
@@ -21,7 +23,6 @@ If you need to pass specific parameters to `check_sf`, see syntastic's help page
 
 Add support for the other file types that `check_sf` supports:
 
-* css/scss
 * HTML
 * mustache/handlebars
 * Velocity
